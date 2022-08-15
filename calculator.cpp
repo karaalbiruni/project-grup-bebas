@@ -1,13 +1,13 @@
-//tambah
-//kali
-//kurang
+//tambah ✔
+//kali ✔
+//kurang ✔
 //bagi
 //rata2
 //factorial
 //pangkat
 //akar
-//cari min
-//cari max
+//cari min ✔
+//cari max ✔
 //median
 //modus
 
@@ -37,6 +37,7 @@ int main()
 		int x;
 		scanf("%d", &x);
 		int sum = 0;
+		printf("Masukin nomer2 nya\n");
 		
 		for (int i = 1; i <= x; i++)
 		{
@@ -53,7 +54,7 @@ int main()
 			}
 			
 		}
-		printf("%d", sum);
+		printf("the result is %d", sum);
 	}
 	else if (operasi == 2)
 	{
@@ -61,6 +62,7 @@ int main()
 		int x;
 		scanf("%d", &x);
 		int sum = 0;
+		printf("Masukin nomer2 nya\n");
 		
 		for (int i = 1; i <= x; i++)
 		{
@@ -77,7 +79,7 @@ int main()
 			}
 			
 		}
-		printf("%d", sum);
+		printf("the result is %d", sum);
 	}
 	else if (operasi == 3)
 	{
@@ -85,6 +87,7 @@ int main()
 		int x;
 		scanf("%d", &x);
 		int sum = 0;
+		printf("Masukin nomer2 nya\n");
 		
 		for (int i = 1; i <= x; i++)
 		{
@@ -101,7 +104,7 @@ int main()
 			}
 			
 		}
-		printf("%d", sum);
+		printf("the result is %d", sum);
 	}
 	else if (operasi == 3)
 	{
@@ -109,6 +112,7 @@ int main()
 		int x;
 		scanf("%d", &x);
 		int sum = 0;
+		printf("Masukin nomer2 nya\n");
 		
 		for (int i = 1; i <= x; i++)
 		{
@@ -125,8 +129,64 @@ int main()
 			}
 			
 		}
-		printf("%d", sum);
+		printf("the result is %d", sum);
 	}
+	
+	else if (operasi == 9)
+	{
+		printf("Mau berapa nomer\n");
+		int t;
+		scanf("%d", &t);
+		long long int sum = 0;
+		printf("Masukin nomer2 nya\n");
+		
+		for (int i = 0; i < t; i++)
+		{
+			int arr[i];
+			scanf("%d", &arr[i]);
+			
+			if (i == 0)
+			{
+				sum = arr[i];
+			}
+			else if (sum >= arr[i])
+			{
+				sum = arr[i];
+			}
+		}
+		
+		printf("the result is %d", sum);
+		
+	}
+	
+	else if (operasi == 10)
+	{
+		printf("Mau berapa nomer\n");
+		int t;
+		scanf("%d", &t);
+		long long int sum = 0;
+		printf("Masukin nomer2 nya\n");
+		
+		for (int i = 0; i < t; i++)
+		{
+			int arr[i];
+			scanf("%d", &arr[i]);
+			
+			if (i == 0)
+			{
+				sum = arr[i];
+			}
+			else if (sum <= arr[i])
+			{
+				sum = arr[i];
+			}
+		}
+		
+		printf("the result is %d", sum);
+		
+	}
+	
+	
 	
 	
 	/*
