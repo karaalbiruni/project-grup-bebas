@@ -2,17 +2,32 @@
 //kali
 //kurang
 //bagi
+//rata2
 //factorial
 //pangkat
 //akar
+//cari min
+//cari max
+//median
+//modus
 
 #include <stdio.h>
 
 int main()
 {
 	printf("Enter mau melakukan operasi apa\n");
-	printf("Ketik satu untuk tambah\n");
+	printf("Ketik 1 untuk tambah\n");
 	printf("Ketik 2 untuk kurang\n");
+	printf("Ketik 3 untuk kali\n");
+	printf("Ketik 4 untuk bagi\n");
+	printf("Ketik 5 untuk rata2\n");
+	printf("Ketik 6 untuk pangkat\n");
+	printf("Ketik 7 untuk akar\n");
+	printf("Ketik 8 untuk factorial\n");
+	printf("Ketik 9 untuk minimum\n");
+	printf("Ketik 10 untuk maximum\n");
+	printf("Ketik 11 untuk median\n");
+	printf("Ketik 12 untuk modus\n");
 	int operasi;
 	scanf ("%d", &operasi);
 	
