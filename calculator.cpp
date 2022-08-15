@@ -40,12 +40,19 @@ int main()
 		
 		for (int i = 1; i <= x; i++)
 		{
-			int y;
-			scanf("%d", &y);
+			int y[i];
+			scanf("%d", &y[i]);
 			
-			sum += y;
+			if (i == 1)
+			{
+				sum = y[i];
+			}
+			else 
+			{
+				sum += y[i];	
+			}
+			
 		}
-		
 		printf("%d", sum);
 	}
 	else if (operasi == 2)
@@ -57,13 +64,70 @@ int main()
 		
 		for (int i = 1; i <= x; i++)
 		{
-			int y;
-			scanf("%d", &y);
+			int y[i];
+			scanf("%d", &y[i]);
 			
-			sum -= y;
+			if (i == 1)
+			{
+				sum = y[i];
+			}
+			else 
+			{
+				sum -= y[i];	
+			}
+			
 		}
 		printf("%d", sum);
 	}
+	else if (operasi == 3)
+	{
+		printf("Mau berapa nomer\n");
+		int x;
+		scanf("%d", &x);
+		int sum = 0;
+		
+		for (int i = 1; i <= x; i++)
+		{
+			int y[i];
+			scanf("%d", &y[i]);
+			
+			if (i == 1)
+			{
+				sum = y[i];
+			}
+			else 
+			{
+				sum *= y[i];	
+			}
+			
+		}
+		printf("%d", sum);
+	}
+	else if (operasi == 3)
+	{
+		printf("Mau berapa nomer\n");
+		int x;
+		scanf("%d", &x);
+		int sum = 0;
+		
+		for (int i = 1; i <= x; i++)
+		{
+			int y[i];
+			scanf("%d", &y[i]);
+			
+			if (i == 1)
+			{
+				sum = y[i];
+			}
+			else 
+			{
+				sum *= y[i];	
+			}
+			
+		}
+		printf("%d", sum);
+	}
+	
 	
 	/*
 	1. tambah
