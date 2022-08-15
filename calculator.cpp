@@ -106,31 +106,6 @@ int main()
 		}
 		printf("the result is %d", sum);
 	}
-	else if (operasi == 3)
-	{
-		printf("Mau berapa nomer\n");
-		int x;
-		scanf("%d", &x);
-		int sum = 0;
-		printf("Masukin nomer2 nya\n");
-		
-		for (int i = 1; i <= x; i++)
-		{
-			int y[i];
-			scanf("%d", &y[i]);
-			
-			if (i == 1)
-			{
-				sum = y[i];
-			}
-			else 
-			{
-				sum *= y[i];	
-			}
-			
-		}
-		printf("the result is %d", sum);
-	}
 	
 	else if (operasi == 9)
 	{
