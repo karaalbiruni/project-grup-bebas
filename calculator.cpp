@@ -3,7 +3,7 @@
 //kurang ✔
 //bagi ✔️
 //rata2 ✔️
-//factorial
+//factorial ✔️
 //pangkat
 //akar
 //cari min ✔
@@ -142,6 +142,23 @@ int main()
 			
 		}
 		printf("the result is %f\n", sum/x);
+	}
+	
+	else if (operasi == 6)
+	{
+		puts("Masukkan suatu bilangan dan pastikan bilangan tersebut >= 0");
+		int a;
+		scanf("%d", &a);
+		if (a < 2) {
+		printf("%d\n", 1);
+	} else {
+		int hasil = 1;
+		for (int i = a; i >= 1; i--) {
+		hasil *= i;
+	}
+	printf("%d\n", hasil);
+	}
+	
 	}
 	
 	else if (operasi == 9)
