@@ -1,7 +1,7 @@
 //tambah ✔
 //kali ✔
 //kurang ✔
-//bagi
+//bagi ✔️
 //rata2
 //factorial
 //pangkat
@@ -105,6 +105,17 @@ int main()
 			
 		}
 		printf("the result is %d", sum);
+	}
+	
+	else if (operasi == 4)
+	{
+	printf("Masukkan pembilang dan penyebut!\n");
+	float x, y;
+	scanf("%f %f", &x, &y);
+	
+	
+	
+	printf("the result is %f", x/y);
 	}
 	
 	else if (operasi == 9)
