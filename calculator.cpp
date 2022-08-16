@@ -115,7 +115,7 @@ int main()
 	
 	
 	
-	printf("the result is %f", x/y);
+	printf("the result is %f\n", x/y);
 	}
 	
 	else if (operasi == 5)
@@ -141,7 +141,7 @@ int main()
 			}
 			
 		}
-		printf("the result is %f", sum/x);
+		printf("the result is %f\n", sum/x);
 	}
 	
 	else if (operasi == 9)
