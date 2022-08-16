@@ -1,6 +1,6 @@
 //tambah ✔
-//kali ✔
 //kurang ✔
+//kali ✔
 //bagi ✔
 //rata2 ✔
 //factorial ✔
