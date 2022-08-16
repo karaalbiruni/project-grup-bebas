@@ -4,7 +4,7 @@
 //bagi ✔
 //rata2 ✔
 //factorial ✔
-//pangkat
+//pangkat ✔
 //akar
 //cari min ✔
 //cari max ✔
@@ -158,7 +158,24 @@ int main()
 	}
 	printf("%d\n", hasil);
 	}
+	}
 	
+	else if (operasi == 7)
+	{
+		int base, exp;
+		puts("masukin base");
+		scanf("%d", &base);
+		puts("masukin exponent");
+		scanf("%d", &exp);
+		int power;
+		power = 1;
+		
+		for (int i = 1; i <= exp; i++)
+		{
+			power *= base;
+		}
+		
+		printf("hasilnya adalah %d", power);
 	}
 	
 	else if (operasi == 9)
