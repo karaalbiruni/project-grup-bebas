@@ -1,6 +1,6 @@
 //tambah ✔
-//kali ✔
 //kurang ✔
+//kali ✔
 //bagi ✔
 //rata2 ✔
 //factorial ✔
@@ -21,9 +21,9 @@ int main()
 	printf("Ketik 3 untuk kali\n");
 	printf("Ketik 4 untuk bagi\n");
 	printf("Ketik 5 untuk rata2\n");
-	printf("Ketik 6 untuk pangkat\n");
-	printf("Ketik 7 untuk akar\n");
-	printf("Ketik 8 untuk factorial\n");
+	printf("Ketik 6 untuk factorial\n");
+	printf("Ketik 7 untuk pangkat\n");
+	printf("Ketik 8 untuk akar\n");
 	printf("Ketik 9 untuk minimum\n");
 	printf("Ketik 10 untuk maximum\n");
 	printf("Ketik 11 untuk median\n");
