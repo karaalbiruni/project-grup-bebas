@@ -2,7 +2,7 @@
 //kali ✔
 //kurang ✔
 //bagi ✔️
-//rata2
+//rata2 ✔️
 //factorial
 //pangkat
 //akar
@@ -116,6 +116,32 @@ int main()
 	
 	
 	printf("the result is %f", x/y);
+	}
+	
+	else if (operasi == 5)
+	{
+		printf("Mau berapa nomer\n");
+		int x;
+		scanf("%d", &x);
+		float sum = 0;
+		printf("Masukin nomer2 nya\n");
+		
+		for (int i = 1; i <= x; i++)
+		{
+			float y[i];
+			scanf("%f", &y[i]);
+			
+			if (i == 1)
+			{
+				sum += y[i];
+			}
+			else 
+			{
+				sum += y[i];	
+			}
+			
+		}
+		printf("the result is %f", sum/x);
 	}
 	
 	else if (operasi == 9)
