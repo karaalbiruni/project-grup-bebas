@@ -5,7 +5,7 @@
 //rata2 ✔
 //factorial ✔
 //pangkat✔
-//akar ✔
+//akar 
 //cari min ✔
 //cari max ✔
 //median
@@ -48,6 +48,36 @@ int minMax(int arrayLen, int min){
 	return res;
 }
 
+//square root, we use binary search for find the output
+int binarySquareRoot(int input,int start,int end){
+	if(start <= end){
+		long int  middle = (start + end)/2;
+		long int  squareEq = middle * middle ;
+		if(squareEq > input){
+			return binarySquareRoot(input,start,middle-1);
+		}else if(squareEq < input){
+			return binarySquareRoot(input,middle+1,end);
+		}else{
+			return middle;
+		}
+	}else{
+		return start-1 ;
+	}
+	
+}
+
+
+
+int squareRoot(int number){
+	if (number < 0){
+		return NULL;
+	}else if(number >=0 && number <=1){
+		return number;
+	}else{
+		int start = 1 , end = number ;
+		return binarySquareRoot(number,start,end);
+	}
+}
 
 int main(){	
 	int operasi;
@@ -225,18 +255,10 @@ int main(){
 		//akar dua
 		else if (operasi == 8)
 		{
-			// puts("Masukkan suatu bilangan dan pastikan bilangan tersebut >= 0");
-			// int a;
-			// scanf("%d", &a);
-			// if (a < 2) {
-			// 	printf("%d\n", 1);
-			// } else {
-			// 	int hasil = 1;
-			// 	for (int i = a; i >= 1; i--) {
-			// 		hasil *= i;
-			// 	}
-			// printf("hasilnya adalah %d\n", hasil);
-			printf("under construction\n");
+			int input;
+			puts("Masukkan angka yang ingin diakarkan");
+			scanf("%d",&input);
+			printf("hasilnya adalah %d\n",squareRoot(input));
 		}	
 		
 		//minimum
