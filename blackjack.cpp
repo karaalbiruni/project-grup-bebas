@@ -47,39 +47,39 @@ int main() {
 
     }
 	else if (input == 4) {
-		printf("Your cards are: %s", set4);
+		printf("Your cards are: %s\n", set4);
 		total = 8+7;
-		printf("Your total is now %d...", total);
+		printf("Your total is now %d...\n", total);
 	}
 	else if (input == 5) {
-		printf("Your cards are: %s", set5);
+		printf("Your cards are: %s\n", set5);
 		total = 8+9;
-		printf("Your total is now %d...", total);
+		printf("Your total is now %d...\n", total);
 	}
 	else if (input == 6) {
-		printf("Your cards are: %s", set6);
+		printf("Your cards are: %s\n", set6);
 		total = 11+2;
-		printf("Your total is now %d...", total);
+		printf("Your total is now %d...\n", total);
 	}
 	else if (input == 7) {
-		printf("Your cards are: %s", set7);
+		printf("Your cards are: %s\n", set7);
 		total = 11;
-		printf("Your total is now %d...", total);
+		printf("Your total is now %d...\n", total);
 	}
 	else if (input == 8) {
-		printf("Your cards are: %s", set8);
+		printf("Your cards are: %s\n", set8);
 		total = 15;
-		printf("Your total is now %d...", total);
+		printf("Your total is now %d...\n", total);
 	}
 	else if (input == 9) {
-		printf("Your cards are: %s", set9);
+		printf("Your cards are: %s\n", set9);
 		total = 16;
-		printf("Your total is now %d...", total);
+		printf("Your total is now %d...\n", total);
 	}
 	else if (input == 10) {
-		printf("Your cards are: %s", set10);
+		printf("Your cards are: %s\n", set10);
 		total = 17;
-		printf("Your total is now %d...", total);
+		printf("Your total is now %d...\n", total);
 	}
 	int stand1 = 5;
     char stand2 = 'A';
@@ -92,8 +92,9 @@ int main() {
     int stand9 = 9;
     int stand10 = 6;
     char choice[200] = "";
-    do {
-        printf("Do you want to STAND/HIT? ");
+    while (total < 21) {
+	do {
+        printf("Do you want to STAND/HIT?\n");
         scanf("%s", &choice);
         getchar();
     } 
@@ -162,13 +163,28 @@ int main() {
 	        total+=stand10;
 	        printf("Your total is now %d... \n", total);
 	    }
+    }
+    else if(choice[0] == 'S') {
+    	break;
+	}
   }
     if (total > 21) {
     	printf("Your cards total sum exceeds 21, which means it's a BUST\n");
-    	printf("You can go back to the menu section by pressing ... or play again by pressing ...\n");
+    	printf("Unfortunately, you have lost the game.\n");
 	}
 	else if (total == 21) {
-		printf("Your cards total sum is 21, You have won the game.\n");
+		printf("Your cards total sum is 21\nCongrats, you have won the game.\n");
+	}
+	else if (total < 21) {
+		int dealer = total + 5;
+		if (dealer > 21) {
+			printf("The dealer's card total sum is %d, which means it's a BUST.\n", dealer);
+			printf("Congrats, you have won the game\n");
+		}
+		else{
+			printf("The dealer's card total sum is %d, it's greater than your total sum.\nUnfortunately, you have lost the game.");
+		}
+		
 	}
     return 0;
 }
