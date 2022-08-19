@@ -18,7 +18,7 @@ int main(){
 	strcpy(bot.initial, "Maira");
 		
 	struct User user;
-	
+	//input data diri 
 	puts("==================================================");
 	puts("              _                            _ ");
 	puts("             | |                          | |  ");
@@ -54,10 +54,24 @@ int main(){
 	puts("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	puts("1. KALKULATOR SUPER CANGGIH");
 	puts("2. MINIGAME (BLACKJACK/21)");
+
 	int choice;
-	printf("%s, Kamu mau pilih yang mana?? %s sudah enggak sabar!!! ", user.name, bot.initial);
-	scanf("%d", &choice);
+	//perulangan jalan terus kalau choicenya diluar 1-2
+	do{
+		printf("%s, Kamu mau pilih yang mana?? %s sudah enggak sabar!!! ", user.name, bot.initial);
+		scanf("%d", &choice);
+	}
+	while(choice >3 || choice < 1);
 	getchar();
+
+	if(choice == 1){
+		//lanjut kalkulator
+		NULL; // ganti null jadi function calculator
+	}else if (choice == 2){
+		//lanjut blackjack
+		NULL; // ganti null jadi function blackjack
+	}
+
 	//KALO MO NAMBAH FITUR LAIN DISINI NAMBAH OPTIONNY!!
 	return 0;
 }       
