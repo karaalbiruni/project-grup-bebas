@@ -5,7 +5,7 @@
 //rata2 ✔
 //factorial ✔
 //pangkat✔
-//akar 
+//akar ✔
 //cari min ✔
 //cari max ✔
 //median
