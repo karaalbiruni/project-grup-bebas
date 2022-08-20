@@ -295,6 +295,7 @@ int main(){
 			printf("Under construction\n");
 		}
 		
+		//modus
 		else if (operasi == 12)
 		{
 			puts("mau berapa nomer");
