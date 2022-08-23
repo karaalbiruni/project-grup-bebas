@@ -1,15 +1,15 @@
 //tambah ✔✔
 //kurang ✔✔
 //kali ✔✔
-//bagi ?
-//rata2 ?
+//bagi ✔✔
+//rata2 ✔✔
 //factorial ✔✔
 //pangkat ✔✔
 //akar ✔✔
-//cari min ?
-//cari max ?
+//cari min ✔
+//cari max ✔
 //median
-//modus ?
+//modus ✔
 #include <stdio.h>
 
 //tambah
@@ -73,6 +73,48 @@ int kali(int x, int sum)
 	}
 	
 	return sum;
+}
+
+//bagi
+float bagi(int x, float sum)
+{
+	for (int i = 1; i <= x; i++)
+	{
+		float y[i];
+		scanf("%d", &y[i]);
+		
+		if (i == 1)
+		{
+			sum = y[i];
+		}
+		else
+		{
+			sum /= y[i];
+		}
+	}
+	
+	return sum;
+}
+
+//rata2
+float rata2(int x, float sum)
+{
+	for (int i = 1; i<= x; i++)
+	{
+		float y[i];
+		scanf("%f", &y[i]);
+		
+		if (i == 1)
+		{
+			sum = y[i];
+		}
+		else
+		{
+			sum += y[i];
+		}
+	}
+	
+	return sum / x;
 }
 
 //faktorial
@@ -206,14 +248,16 @@ int main(){
 		
 		//bagi
 		else if (operasi == 4){
-			printf("Masukkan pembilang dan penyebut!\n");
-			float x, y;
-			scanf("%f %f", &x, &y);
-		
-		
-			printf("the result is %f\n", x/y);
+			printf("Mau berapa nomer\n");
+			int x;
+			scanf("%d", &x);
+			float sum = 0;
+			printf("masukin nomer2 nya\n");
+			
+			printf("the result is %.2f\n", bagi(x, sum));
 		}
 		
+		//rata2
 		else if (operasi == 5)
 		{
 			printf("Mau berapa nomer\n");
@@ -222,22 +266,7 @@ int main(){
 			float sum = 0;
 			printf("Masukin nomer2 nya\n");
 			
-			for (int i = 1; i <= x; i++)
-			{
-				float y[i];
-				scanf("%f", &y[i]);
-				
-				if (i == 1)
-				{
-					sum += y[i];
-				}
-				else 
-				{
-					sum += y[i];	
-				}
-				
-			}
-			printf("the result is %f\n", sum/x);
+			printf("the result is %.2f\n", rata2(x, sum));
 		}
 		
 		//faktorial
