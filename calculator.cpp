@@ -1,16 +1,79 @@
 //tambah ✔✔
 //kurang ✔✔
 //kali ✔✔
-//bagi ✔
-//rata2 ✔
+//bagi ?
+//rata2 ?
 //factorial ✔✔
-//pangkat✔✔
+//pangkat ✔✔
 //akar ✔✔
-//cari min ✔
-//cari max ✔
+//cari min ?
+//cari max ?
 //median
-//modus ✔
+//modus ?
 #include <stdio.h>
+
+//tambah
+int tambah(int x, int sum)
+{
+	for (int i = 1; i <= x; i++)
+	{
+		int y[i];
+		scanf("%d", &y[i]);
+		
+		if (i == 1)
+		{
+			sum = y[i];
+		}
+		else
+		{
+			sum += y[i];
+		}
+	}
+	
+	return sum;
+}
+
+//kurang
+int kurang(int x, int sum)
+{
+	for (int i = 1; i <= x; i++)
+	{
+		int y[i];
+		scanf("%d", &y[i]);
+		
+		if (i == 1)
+		{
+			sum = y[i];
+		}
+		else
+		{
+			sum -= y[i];
+		}
+	}
+	
+	return sum;
+}
+
+//kali
+int kali(int x, int sum)
+{
+	for (int i = 1; i <= x; i++)
+	{
+		int y[i];
+		scanf("%d", &y[i]);
+		
+		if (i == 1)
+		{
+			sum = y[i];
+		}
+		else
+		{
+			sum *= y[i];
+		}
+	}
+	
+	return sum;
+}
 
 //faktorial
 int factorial(int number){
@@ -114,22 +177,7 @@ int main(){
 			int sum = 0;
 			printf("Masukin nomer2 nya\n");
 			
-			for (int i = 1; i <= x; i++)
-			{
-				int y[i];
-				scanf("%d", &y[i]);
-				
-				if (i == 1)
-				{
-					sum = y[i];
-				}
-				else 
-				{
-					sum += y[i];	
-				}
-				
-			}
-			printf("the result is %d\n", sum);
+			printf("the result is %d\n", tambah(x, sum));
 		}
 
 		//kurang
@@ -141,22 +189,7 @@ int main(){
 			int sum = 0;
 			printf("Masukin nomer2 nya\n");
 			
-			for (int i = 1; i <= x; i++)
-			{
-				int y[i];
-				scanf("%d", &y[i]);
-				
-				if (i == 1)
-				{
-					sum = y[i];
-				}
-				else 
-				{
-					sum -= y[i];	
-				}
-				
-			}
-			printf("the result is %d\n", sum);
+			printf("the result is %d\n", kurang(x, sum));
 		}
 
 		//kali 
@@ -168,22 +201,7 @@ int main(){
 			int sum = 0;
 			printf("Masukin nomer2 nya\n");
 			
-			for (int i = 1; i <= x; i++)
-			{
-				int y[i];
-				scanf("%d", &y[i]);
-				
-				if (i == 1)
-				{
-					sum = y[i];
-				}
-				else 
-				{
-					sum *= y[i];	
-				}
-				
-			}
-			printf("the result is %d\n", sum);
+			printf("the result is %d\n", kali(x, sum));
 		}
 		
 		//bagi
