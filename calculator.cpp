@@ -1,15 +1,15 @@
-//tambah ✔✔
-//kurang ✔✔
-//kali ✔✔
-//bagi ✔✔
-//rata2 ✔✔
-//factorial ✔✔
-//pangkat ✔✔
-//akar ✔✔
-//cari min ✔✔
-//cari max ✔✔
+//tambah ??
+//kurang ??
+//kali ??
+//bagi ??
+//rata2 ??
+//factorial ??
+//pangkat ??
+//akar ??
+//cari min ??
+//cari max ??
 //median
-//modus ✔✔
+//modus ??
 #include <stdio.h>
 
 //tambah
@@ -235,20 +235,29 @@ int main(){
 
 		//menu kalkulator , berhenti jika angka yang diimput adalah 1 - 13
 		do{
-		printf("Enter mau melakukan operasi apa\n");
-		printf("Ketik 1 untuk tambah\n");
-		printf("Ketik 2 untuk kurang\n");
-		printf("Ketik 3 untuk kali\n");
-		printf("Ketik 4 untuk bagi\n");
-		printf("Ketik 5 untuk rata2\n");
-		printf("Ketik 6 untuk factorial\n");
-		printf("Ketik 7 untuk pangkat\n");
-		printf("Ketik 8 untuk akar\n");
-		printf("Ketik 9 untuk minimum\n");
-		printf("Ketik 10 untuk maximum\n");
-		printf("Ketik 11 untuk median\n");
-		printf("Ketik 12 untuk modus\n");
-		printf("Ketik 13 untuk kembali ke menu utama\n");
+			
+		puts("   _____      _            _       _             ");
+		puts("  / ____|    | |          | |     | |            ");
+		puts(" | |     __ _| | ___ _   _| | __ _| |_ ___  _ __ ");
+		puts(" | |    / _` | |/ __| | | | |/ _` | __/ _ \\| '__|");
+		puts(" | |___| (_| | | (__| |_| | | (_| | || (_) | |   ");
+		printf("  \\_____\\__,_|_|\\___|\\__,_|_|\\__,_|\\__\\___/|_|   \n\n\n");	
+		
+		printf("Ketik angka 1 - 13 untuk: \n\n");
+		printf("1.  Penjumlahan\n");
+		printf("2.  Pengurangan\n");
+		printf("3.  Perkalian\n");
+		printf("4.  Pembagian\n");
+		printf("5.  Rata-rata\n");
+		printf("6.  Factorial\n");
+		printf("7.  Pangkat\n");
+		printf("8.  Akar\n");
+		printf("9.  Minimum\n");
+		printf("10. Maximum\n");
+		printf("11. Median\n");
+		printf("12. Modus\n");
+		printf("13. Kembali ke menu utama\n\n");
+		printf("Input: ");
 
 		scanf ("%d", &operasi);
 		}while( operasi < 1 || operasi > 13);
