@@ -6,8 +6,8 @@
 //factorial ✔✔
 //pangkat ✔✔
 //akar ✔✔
-//cari min ✔
-//cari max ✔
+//cari min ✔✔
+//cari max ✔✔
 //median
 //modus ✔
 #include <stdio.h>
@@ -184,6 +184,64 @@ int squareRoot(int number){
 	}
 }
 
+//minimum
+int minimum(int array_res, int arrayLen)
+{
+	array_res = minMax(arrayLen, 1);
+	
+	return array_res;
+}
+
+//maximum
+int maximum(int array_res, int arrayLen)
+{
+	array_res = minMax(arrayLen, 0);
+	
+	return array_res;
+}
+
+//modus
+int modus(int n, int maxValue, int maxCount, int count)
+{
+	int arr[n];
+	
+	for (int i = 0; i < n; i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+	
+	for (int i = 0; i < n; i++)
+	{
+		count = 0;
+		
+		for (int j = 0; j < n; j++)
+		{
+			if (arr[i] == arr[j])
+			{
+				count++;
+			}
+		}
+	}
+	
+	if (count == 0)
+	{
+		printf("There is no mode\n");
+	}
+	else
+	{
+		for (int i = 0; i < n; i++)
+		{
+			if (count > maxCount)
+			{
+				maxCount = count;
+				maxValue = arr[i];
+			}
+		}
+		
+		printf("Your mode is %d\n", maxValue);
+	}
+}
+
 int main(){	
 	int operasi;
 
@@ -314,11 +372,11 @@ int main(){
 			printf("Mau berapa nomer\n");
 			int arrayLen;
 			scanf("%d", &arrayLen);
+			int array_res;
 
 			printf("Masukin nomer2 nya\n");
-			int array_res = minMax(arrayLen,1);
 			
-			printf("the result is %d\n", array_res);
+			printf("the result is %d\n", minimum(array_res, arrayLen));
 			
 		}
 
@@ -329,11 +387,11 @@ int main(){
 			printf("Mau berapa nomer\n");
 			int arrayLen;
 			scanf("%d", &arrayLen);
+			int array_res;
 
 			printf("Masukin nomer2 nya\n");
-			int array_res = minMax(arrayLen,0);
 			
-			printf("the result is %d\n", array_res);
+			printf("the result is %d\n", maximum(array_res, arrayLen));
 			
 		}
 
@@ -388,7 +446,9 @@ int main(){
 				
 				printf("Your mode is %d\n", maxValue);
 			}
-		}else if (operasi == 13){
+		}
+		
+		else if (operasi == 13){
 			break;
 		}
 	}
