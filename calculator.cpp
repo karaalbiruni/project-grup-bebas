@@ -81,7 +81,7 @@ float bagi(int x, float sum)
 	for (int i = 1; i <= x; i++)
 	{
 		float y[i];
-		scanf("%d", &y[i]);
+		scanf("%f", &y[i]);
 		
 		if (i == 1)
 		{
