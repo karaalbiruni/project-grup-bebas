@@ -9,7 +9,7 @@
 //cari min ✔✔
 //cari max ✔✔
 //median
-//modus ✔
+//modus ✔✔
 #include <stdio.h>
 
 //tambah
@@ -201,45 +201,30 @@ int maximum(int array_res, int arrayLen)
 }
 
 //modus
-int modus(int n, int maxValue, int maxCount, int count)
+int modus(int n, int arr[])
 {
-	int arr[n];
+	int maxValue = 0, maxCount = 0;
 	
 	for (int i = 0; i < n; i++)
 	{
-		scanf("%d", &arr[i]);
-	}
-	
-	for (int i = 0; i < n; i++)
-	{
-		count = 0;
+		int count = 0;
 		
 		for (int j = 0; j < n; j++)
 		{
-			if (arr[i] == arr[j])
+			if (arr[j] == arr[i])
 			{
 				count++;
 			}
 		}
+		
+		if (count > maxCount)
+		{
+			maxCount = count;
+			maxValue = arr[i];
+		}
 	}
 	
-	if (count == 0)
-	{
-		printf("There is no mode\n");
-	}
-	else
-	{
-		for (int i = 0; i < n; i++)
-		{
-			if (count > maxCount)
-			{
-				maxCount = count;
-				maxValue = arr[i];
-			}
-		}
-		
-		printf("Your mode is %d\n", maxValue);
-	}
+	return maxValue;
 }
 
 int main(){	
@@ -277,7 +262,7 @@ int main(){
 			int sum = 0;
 			printf("Masukin nomer2 nya\n");
 			
-			printf("the result is %d\n", tambah(x, sum));
+			printf("the result is %d\n\n", tambah(x, sum));
 		}
 
 		//kurang
@@ -289,7 +274,7 @@ int main(){
 			int sum = 0;
 			printf("Masukin nomer2 nya\n");
 			
-			printf("the result is %d\n", kurang(x, sum));
+			printf("the result is %d\n\n", kurang(x, sum));
 		}
 
 		//kali 
@@ -301,7 +286,7 @@ int main(){
 			int sum = 0;
 			printf("Masukin nomer2 nya\n");
 			
-			printf("the result is %d\n", kali(x, sum));
+			printf("the result is %d\n\n", kali(x, sum));
 		}
 		
 		//bagi
@@ -312,7 +297,7 @@ int main(){
 			float sum = 0;
 			printf("masukin nomer2 nya\n");
 			
-			printf("the result is %.2f\n", bagi(x, sum));
+			printf("the result is %.2f\n\n", bagi(x, sum));
 		}
 		
 		//rata2
@@ -324,7 +309,7 @@ int main(){
 			float sum = 0;
 			printf("Masukin nomer2 nya\n");
 			
-			printf("the result is %.2f\n", rata2(x, sum));
+			printf("the result is %.2f\n\n", rata2(x, sum));
 		}
 		
 		//faktorial
@@ -333,7 +318,7 @@ int main(){
 			puts("Masukkan bilangan yang diinginkan");
 			scanf("%d", &angka);
 			
-			printf("hasilnya adalah %d\n", factorial(angka));
+			printf("hasilnya adalah %d\n\n", factorial(angka));
 
 		}
 
@@ -353,7 +338,7 @@ int main(){
 				power *= base;
 			}
 			
-			printf("hasilnya adalah %d\n", power);
+			printf("hasilnya adalah %d\n\n", power);
 		}
 
 
@@ -363,7 +348,7 @@ int main(){
 			int input;
 			puts("Masukkan angka yang ingin diakarkan");
 			scanf("%d",&input);
-			printf("hasilnya adalah %d\n",squareRoot(input));
+			printf("hasilnya adalah %d\n\n",squareRoot(input));
 		}	
 		
 		//minimum
@@ -376,7 +361,7 @@ int main(){
 
 			printf("Masukin nomer2 nya\n");
 			
-			printf("the result is %d\n", minimum(array_res, arrayLen));
+			printf("the result is %d\n\n", minimum(array_res, arrayLen));
 			
 		}
 
@@ -391,7 +376,7 @@ int main(){
 
 			printf("Masukin nomer2 nya\n");
 			
-			printf("the result is %d\n", maximum(array_res, arrayLen));
+			printf("the result is %d\n\n", maximum(array_res, arrayLen));
 			
 		}
 
@@ -414,38 +399,9 @@ int main(){
 				scanf("%d", &arr[i]);
 			}
 			
-			int maxValue = 0, maxCount = 0, count = 0;
+			printf("The result is %d\n\n", modus(n, arr));
 			
-			for (int i = 0; i < n; i++)
-			{
-				count = 0;
-				
-				for (int j = 0; j < n; j++)
-				{
-					if (arr[i] == arr[j])
-					{
-						count++;
-					}
-				}
-			}
 			
-			if (count == n)
-			{
-				printf("There is no mode\n");
-			}
-			else
-			{
-				for (int i = 0; i < n; i++)
-				{
-					if (count > maxCount)
-					{
-						maxCount = count;
-						maxValue = arr[i];
-					}
-				}
-				
-				printf("Your mode is %d\n", maxValue);
-			}
 		}
 		
 		else if (operasi == 13){
