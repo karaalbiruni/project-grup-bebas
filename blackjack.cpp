@@ -13,73 +13,73 @@ int main() {
 	char set10[10] ="10 7";
 	int input;
 	int total = 0;
-	printf("Choose a random number between 1-10! \n");
+	printf("Pilihlah sebuah angka dari 1-10! \n");
 	scanf("%d", &input );
 	if (input == 1) {
 		int A;
-		printf("Your cards are: %s\n", set1);
+		printf("Kartu anda adalah: %s\n", set1);
 		   do {
-            printf("Since you got an A card, what will you choose as it's value (1/11)? : \n");
+            printf("Karena anda mendapatkan kartu A, berapa nilai kartu yang anda pilih (1/11)? : \n");
             scanf("%d", &A);
             getchar();
         } 
         while (A != 1 && A != 11);
         total = A+6;
-		printf("Since you picked %d, your total is now %d...\n", A, total);
+		printf("Karena anda memilih %d, jumlah angka kartu anda %d...\n", A, total);
 
     }
 	else if (input == 2) {
-		printf("Your cards are: %s", set2);
+		printf("Kartu anda adalah: %s\n", set2);
 		total = 9+2;
-		printf("Your total is now %d...", total);
+		printf("Jumlah angka kartu anda %d...", total);
 	}
 	else if (input == 3) {
 		int A;
-		printf("Your cards are: %s\n", set3);
+		printf("Kartu anda adalah: %s\n", set3);
 		   do {
-            printf("Since you got an A card, what will you choose as it's value (1/11)? : \n");
+            printf("Karena anda mendapatkan kartu A, berapa nilai kartu yang anda pilih (1/11)? : \n");
             scanf("%d", &A);
             getchar();
         } 
         while (A != 1 && A != 11);
         total = A+10;
-		printf("Since you picked %d, your total is now %d...\n", A, total);
+		printf("Karena anda memilih %d, jumlah angka kartu anda %d...\n", A, total);
 
     }
 	else if (input == 4) {
-		printf("Your cards are: %s\n", set4);
+		printf("Kartu anda adalah: %s\n", set4);
 		total = 8+7;
-		printf("Your total is now %d...\n", total);
+		printf("Jumlah angka kartu anda %d...", total);
 	}
 	else if (input == 5) {
-		printf("Your cards are: %s\n", set5);
+		printf("Kartu anda adalah: %s\n", set5);
 		total = 8+9;
-		printf("Your total is now %d...\n", total);
+		printf("Jumlah angka kartu anda %d...", total);
 	}
 	else if (input == 6) {
-		printf("Your cards are: %s\n", set6);
+		printf("Kartu anda adalah: %s\n", set6);
 		total = 11+2;
-		printf("Your total is now %d...\n", total);
+		printf("Jumlah angka kartu anda %d...", total);
 	}
 	else if (input == 7) {
-		printf("Your cards are: %s\n", set7);
+		printf("Kartu anda adalah: %s\n", set7);
 		total = 11;
-		printf("Your total is now %d...\n", total);
+		printf("Jumlah angka kartu anda %d...", total);
 	}
 	else if (input == 8) {
-		printf("Your cards are: %s\n", set8);
+		printf("Kartu anda adalah: %s\n", set8);
 		total = 15;
-		printf("Your total is now %d...\n", total);
+		printf("Jumlah angka kartu anda %d...", total);
 	}
 	else if (input == 9) {
-		printf("Your cards are: %s\n", set9);
+		printf("Kartu anda adalah: %s\n", set9);
 		total = 16;
-		printf("Your total is now %d...\n", total);
+		printf("Jumlah angka kartu anda %d...", total);
 	}
 	else if (input == 10) {
-		printf("Your cards are: %s\n", set10);
+		printf("Kartu anda adalah: %s\n", set10);
 		total = 17;
-		printf("Your total is now %d...\n", total);
+		printf("Jumlah angka kartu anda %d...", total);
 	}
 	int stand1 = 5;
     char stand2 = 'A';
@@ -94,7 +94,7 @@ int main() {
     char choice[200] = "";
     while (total < 21) {
 	do {
-        printf("Do you want to STAND/HIT?\n");
+        printf("Apakah anda ingin STAND/HIT?\n");
         scanf("%s", &choice);
         getchar();
     } 
@@ -102,66 +102,66 @@ int main() {
 		
 	if (choice[0] == 'H') {
 	    int input1;
-	    printf("Choose a random number between 1-10! \n");
+	    printf("Pilihlah sebuah angka dari 1-10! \n");
 	    scanf("%d", &input1);
 	    getchar();
 	    
 	    if(input1 == 1){
-	        printf("You got %d! \n", stand1);
+	        printf("Kartu anda adalah: %s\n", stand1);
 	        total +=stand1;
-	        printf("Your total is now %d...\n", total);
+	        printf("Jumlah angka kartu anda %d...", total);
 	    }
 	    else if(input1 == 2){
-	        printf("You got %c! \n", stand2);
+	        printf("Anda mendapatkan %c! \n", stand2);
 	        int A2;
 	        do {
-	            printf("Since you got an A card, what will you choose as it's value (1/11)? : \n");
+	            printf("Karena anda mendapatkan kartu A, berapa nilai kartu yang anda pilih (1/11)? : \n");
 	            scanf("%d", &A2);
 	            getchar();
 	        } 
 	        while (A2 != 1 && A2 != 11);
 	        total +=A2;
-			printf("Since you picked %d, your total is now %d...\n", A2, total);
+			printf("Karena anda memilih %d, jumlah angka kartu anda %d...\n", A2, total);
 	    }
 	    else if(input1 == 3){
-	        printf("You got %d! \n", stand3);
+	        printf("Anda mendapatkan %c! \n", stand3);
 	        total+=stand3;
-	        printf("Your total is now %d...\n", total);
+	        printf("Jumlah angka kartu anda %d...\n", total);
 	    }
 	    else if(input1 == 4){
-	        printf("You got %d! \n", stand4);
+	        printf("Anda mendapatkan %d! \n", stand4);
 	        total+=stand4;
-	        printf("Your total is now %d...\n", total);
+	        printf("Jumlah angka kartu anda %d...\n", total);
 	    }
 	    else if(input1 == 5){
-	        printf("You got %d! \n", stand5);
+	        printf("Anda mendapatkan %d! \n", stand5);
 	        total+=stand5;
-	        printf("Your total is now %d...\n", total);
+	        printf("Jumlah angka kartu anda %d...\n", total);
 	    }
 	    else if(input1 == 6){
-	        printf("You got %d! \n", stand6);
+	        printf("Anda mendapatkan %d! \n", stand6);
 	        total+=stand6;
-	        printf("Your total is now %d...\n", total);
+	        printf("Jumlah angka kartu anda %d...\n", total);
 	    }
 	    else if(input1 == 7){
-	        printf("You got %d! \n", stand7);
+	        printf("Anda mendapatkan %d! \n", stand7);
 	        total+=stand7;
-	        printf("Your total is now %d...\n", total);
+	        printf("Jumlah angka kartu anda %d...\n", total);
 	    }
 	    else if(input1 == 8){
-	        printf("You got %d! \n", stand8);
+	        printf("Anda mendapatkan %d \n", stand8);
 	        total+=stand8;
-	        printf("Your total is now %d...\n", total);
+	        printf("Jumlah angka kartu anda %d...\n", total);
 	    }
 	    else if(input1 ==9){
-	        printf("You got %d! \n", stand9);
+	        printf("Anda mendapatkan %d! \n", stand9);
 	        total+=stand9;
-	        printf("Your total is now %d...\n", total);
+	        printf("Jumlah angka kartu anda %d...\n", total);
 	    }
 	    else if(input1 == 10){
-	        printf("You got %d! \n", stand10);
+	        printf("Anda mendapatkan %d! \n", stand10);
 	        total+=stand10;
-	        printf("Your total is now %d... \n", total);
+	        printf("Jumlah angka kartu anda %d... \n", total);
 	    }
     }
     else if(choice[0] == 'S') {
@@ -169,20 +169,20 @@ int main() {
 	}
   }
     if (total > 21) {
-    	printf("Your cards total sum exceeds 21, which means it's a BUST\n");
-    	printf("Unfortunately, you have lost the game.\n");
+    	printf("Jumlah angka kartu anda melebihi 21, yang artinya anda BUST\n");
+    	printf("Anda kalah dalam permainan.\n");
 	}
 	else if (total == 21) {
-		printf("Your cards total sum is 21\nCongrats, you have won the game.\n");
+		printf("Jumlah angka kartu anda 21.\nSelamat, anda telah memenangkan permainan.\n");
 	}
 	else if (total < 21) {
 		int dealer = total + 5;
 		if (dealer > 21) {
-			printf("The dealer's card total sum is %d, which means it's a BUST.\n", dealer);
-			printf("Congrats, you have won the game\n");
+			printf("Jumlah angka kartu dealer adalah %d, yang artinya ialah BUST.\n", dealer);
+			printf("Selamat, anda telah memenangkan permainan.\n");
 		}
 		else{
-			printf("The dealer's card total sum is %d, it's greater than your total sum.\nUnfortunately, you have lost the game.");
+			printf("Jumlah angka kartu dealer adalah %d, jumlah angka kartu dealer melebihi jumlah angka milikmu.\nAnda telah kalah dalam permainan.");
 		}
 		
 	}
