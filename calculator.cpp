@@ -3,9 +3,9 @@
 //kali ✔
 //bagi ✔
 //rata2 ✔
-//factorial ✔
-//pangkat✔
-//akar ✔
+//factorial ✔✔
+//pangkat✔✔
+//akar ✔✔
 //cari min ✔
 //cari max ✔
 //median
