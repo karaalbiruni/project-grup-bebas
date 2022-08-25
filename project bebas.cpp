@@ -14,11 +14,9 @@ struct Bot
 	};
 
 struct User user;
+
 struct Bot bots[3];
 	
-strcpy(bots[0].initial,"Maira");
-strcpy(bots[1].initial,"Veronica");
-strcpy(bots[2].initial,"Maira");
 
 
 void subMenu(); 
@@ -317,6 +315,10 @@ void mergeSort(int arr[], int start, int end){
 
 
 int main(){
+	strcpy(bots[0].initial,"Maira");
+	strcpy(bots[1].initial,"Veronica");
+	strcpy(bots[2].initial,"Fita");
+
     int charBotName = strlen(bots[0].initial);
 		
 	
@@ -334,7 +336,7 @@ int main(){
     scanf("%[^\n]", user.name);
     getchar();
     int charUserName = strlen(user.name);
-    if(strcmp(user.name, bot.initial)==0)
+    if(strcmp(user.name, bots[0].initial)==0)
     {
         printf("Nama kita sama nichhh!!\n");
     }
