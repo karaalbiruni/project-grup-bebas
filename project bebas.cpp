@@ -14,7 +14,12 @@ struct Bot
 	};
 
 struct User user;
-struct Bot bot;	
+struct Bot bots[3];
+	
+strcpy(bots[0].initial,"Maira");
+strcpy(bots[1].initial,"Veronica");
+strcpy(bots[2].initial,"Maira");
+
 
 void subMenu(); 
 
@@ -312,9 +317,7 @@ void mergeSort(int arr[], int start, int end){
 
 
 int main(){
-	struct Bot bot;
-    strcpy(bot.initial, "Maira");
-    int charBotName = strlen(bot.initial);
+    int charBotName = strlen(bots[0].initial);
 		
 	
 	//input data diri 
@@ -326,7 +329,7 @@ int main(){
 	puts(" \\ V  V /  __/ | (_| (_) | | | | | |  __/ |_| ");
 	puts("  \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___| (_) ");
 	puts("==================================================");
-	printf("Halo user! Perkenalkan, nama saya %s!\n", bot.initial);
+	printf("Halo user! Perkenalkan, nama saya %s!\n", bots[0].initial);
     printf("Enggak enak nih, manggil kamu user... Nama kamu siapa yaaa? ");
     scanf("%[^\n]", user.name);
     getchar();
@@ -376,7 +379,7 @@ void subMenu() {
 	int choice;
 	//perulangan jalan terus kalau choicenya diluar 1-2
 	do{
-		printf("%s, Kamu mau pilih yang mana?? %s sudah enggak sabar!!! ", user.name, bot.initial);
+		printf("%s, Kamu mau pilih yang mana?? %s sudah enggak sabar!!! ", user.name, bots[0].initial);
 		scanf("%d", &choice);
 	}
 	while(choice >3 || choice < 1);
@@ -413,6 +416,7 @@ void calculator(){
 			puts(" | |___| (_| | | (__| |_| | | (_| | || (_) | |   ");
 			printf("  \\_____\\__,_|_|\\___|\\__,_|_|\\__,_|\\__\\___/|_|   \n\n\n");	
 			
+			printf("Halo user! saya %s! dan selamat datang di kalkulator\n", bots[1].initial);
 			printf("Ketik angka 1 - 13 untuk: \n\n");
 			printf("1.  Penjumlahan\n");
 			printf("2.  Pengurangan\n");
@@ -648,6 +652,7 @@ void blackJack() {
 	puts("| |_\\\\| |_/\\| |-|||  \\__|   \\ /\\_| || |-|||  \\__|   \\");
 	puts("\\____/\\____/\\_/ \\|\\____/\\_|\\_\\\\____/\\_/ \\|\\____/\\_|\\_\\");
 	printf("\n");
+	printf("Halo user! saya %s! dan selamat datang di permaninan blackjack\n", bots[2].initial);
 	printf("Pilihlah sebuah angka dari 1-10! \n");
 	scanf("%d", &input );
 	if (input == 1) {
