@@ -118,7 +118,7 @@ float rata2(int x, float sum)
 }
 
 //faktorial
-int factorial(int number){
+int factorial(unsigned int number){
 	if(number ==1){
 		return 1;
 	}else{
@@ -400,9 +400,9 @@ void calculator(){
 		
 		//faktorial
 		else if(operasi == 6){
-			int angka;
+			unsigned int angka;
 			puts("Masukkan bilangan yang diinginkan");
-			scanf("%d", &angka);
+			scanf("%u", &angka);
 			
 			printf("hasilnya adalah %d\n\n", factorial(angka));
 
