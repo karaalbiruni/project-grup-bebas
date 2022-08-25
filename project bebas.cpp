@@ -349,8 +349,6 @@ int main(){
     printf("Kamu ini cowok atau cewek ya? Aku penasaran... ");
     scanf("%s", user.gender);
     getchar();
-    
-    printf("Oke %s, %s sudah mencatat bahwa kamu adalah seorang %s yang bernama %s dan kamu mengambil jurusan %s!\n", user.name, bot.initial, user.gender, user.name, user.jurusan);
     subMenu();
     //KALO MO NAMBAH FITUR LAIN DISINI NAMBAH OPTIONNY!!
     return 0;
@@ -359,6 +357,10 @@ int main(){
 }      
 
 void subMenu() {
+	for(int i = 0; i < 30; i++)
+		{
+			printf("\n");
+		}
 	puts("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");	
 	puts("  ______  __    __    ______     ______        _______. _______      ______   .__   __.  _______     __    ");
  	puts(" /      ||  |  |  |  /  __  \\   /  __  \\      /       ||   ____|    /  __  \\  |  \\ |  | |   ____|   |  |     ");
@@ -370,7 +372,7 @@ void subMenu() {
 	puts("1. KALKULATOR SUPER CANGGIH");
 	puts("2. MINIGAME (BLACKJACK/21)");
 	puts("3. EXIT");
-
+	
 	int choice;
 	//perulangan jalan terus kalau choicenya diluar 1-2
 	do{
@@ -400,7 +402,10 @@ void calculator(){
 
 		//menu kalkulator , berhenti jika angka yang diimput adalah 1 - 13
 		do{
-				
+			for(int i = 0; i < 30; i++)
+			{
+				printf("\n");
+			}	
 			puts("   _____      _            _       _             ");
 			puts("  / ____|    | |          | |     | |            ");
 			puts(" | |     __ _| | ___ _   _| | __ _| |_ ___  _ __ ");
@@ -430,58 +435,58 @@ void calculator(){
 		//pertambahan
 		if (operasi == 1)
 		{
-			printf("Mau berapa nomer\n");
+			printf("Kamu mau menginput berapa nomor ya?? = ");
 			int x;
 			scanf("%d", &x);
 			int sum = 0;
-			printf("Masukin nomer2 nya\n");
+			printf("Masukkan value dari setiap nomor = \n");
 			
-			printf("the result is %d\n\n", tambah(x));
+			printf("Hasil akhirnya adalah %d!\n\n", tambah(x));
 		}
 
 		//kurang
 		else if (operasi == 2)
 		{
-			printf("Mau berapa nomer\n");
+			printf("Kamu mau menginput berapa nomor ya?? = ");
 			int x;
 			scanf("%d", &x);
 			int sum = 0;
-			printf("Masukin nomer2 nya\n");
+			printf("Masukkan value dari setiap nomor = \n");
 			
-			printf("the result is %d\n\n", kurang(x, sum));
+			printf("Hasil akhirnya adalah %d!\n\n", kurang(x, sum));
 		}
 
 		//kali 
 		else if (operasi == 3)
 		{
-			printf("Mau berapa nomer\n");
+			printf("Kamu mau menginput berapa nomor ya?? = ");
 			int x;
 			scanf("%d", &x);
 			int sum = 0;
-			printf("Masukin nomer2 nya\n");
+			printf("Masukkan value dari setiap nomor = \n");
 			
-			printf("the result is %d\n\n", kali(x, sum));
+			printf("Hasil akhirnya adalah %d!\n\n", kali(x, sum));
 		}
 		
 		//bagi
 		else if (operasi == 4){
-			printf("Mau berapa nomer\n");
+			printf("Kamu mau menginput berapa nomor ya?? = ");
 			int x;
 			scanf("%d", &x);
 			float sum = 0;
-			printf("masukin nomer2 nya\n");
+			printf("Masukkan value dari setiap nomor = \n");
 			
-			printf("the result is %.2f\n\n", bagi(x, sum));
+			printf("Hasil akhirnya adalah %.2f!\n\n", bagi(x, sum));
 		}
 		
 		//rata2
 		else if (operasi == 5)
 		{
-			printf("Mau berapa nomer\n");
+			printf("Kamu mau menginput berapa nomor ya?? = ");
 			int x;
 			scanf("%d", &x);
 			float sum = 0;
-			printf("Masukin nomer2 nya\n");
+			printf("Masukkan value dari setiap nomor = \n");
 			
 			printf("the result is %.2f\n\n", rata2(x, sum));
 		}
@@ -489,20 +494,19 @@ void calculator(){
 		//faktorial
 		else if(operasi == 6){
 			unsigned int angka;
-			puts("Masukkan bilangan yang diinginkan");
+			puts("Masukkan bilangan yang diinginkan! = ");
 			scanf("%u", &angka);
 			
-			printf("hasilnya adalah %d\n\n", factorial(angka));
+			printf("Hasil akhirnya adalah %d!\n\n", factorial(angka));
 
 		}
-
 		//pangkat
 		else if (operasi == 7)
 		{
 			int base, exp;
-			puts("masukin base");
+			puts("Masukkan basis angka yang ingin dipangkatkan! = ");
 			scanf("%d", &base);
-			puts("masukin exponent");
+			puts("Masukkan eksponen/pangkat dari basis! = ");
 			scanf("%d", &exp);
 			int power;
 			power = 1;
@@ -512,7 +516,7 @@ void calculator(){
 				power *= base;
 			}
 			
-			printf("hasilnya adalah %d\n\n", power);
+			printf("Hasil akhirnya adalah %d\n\n", power);
 		}
 
 
@@ -520,20 +524,20 @@ void calculator(){
 		else if (operasi == 8)
 		{
 			int input;
-			puts("Masukkan angka yang ingin diakarkan");
+			puts("Masukkan angka yang ingin diakarkan! = ");
 			scanf("%d",&input);
-			printf("hasilnya adalah %d\n\n",squareRoot(input));
+			printf("Hasil akhirnya adalah %d!\n\n",squareRoot(input));
 		}	
 		
 		//minimum
 		else if (operasi == 9)
 		{
-			printf("Mau berapa nomer\n");
+			printf("Kamu mau menginput berapa nomor ya?? = ");
 			int arrayLen;
 			scanf("%d", &arrayLen);
 			int array_res;
 
-			printf("Masukin nomer2 nya\n");
+			printf("Masukkan value dari setiap nomor = \n");
 			
 			printf("the result is %d\n\n", minimum(array_res, arrayLen));
 			
@@ -543,25 +547,25 @@ void calculator(){
 		//maksimum
 		else if (operasi == 10)
 		{
-			printf("Mau berapa nomer\n");
+			printf("Kamu mau menginput berapa nomor ya?? = ");
 			int arrayLen;
 			scanf("%d", &arrayLen);
 			int array_res;
 
-			printf("Masukin nomer2 nya\n");
+			printf("Masukkan value dari setiap nomor = \n");
 			
-			printf("the result is %d\n\n", maximum(array_res, arrayLen));
+			printf("Hasil akhirnya adalah %d!\n\n", maximum(array_res, arrayLen));
 			
 		}
 
         //median
 		else if(operasi == 11){
 			
-			puts("mau berapa nomor");
+			puts("Kamu mau menginput berapa nomor ya?? = ");
 			int n; 
 			scanf("%d", &n);
 			int arr[n];
-			puts("masukin nomornya");
+			puts("Masukkan value dari setiap nomor = \n");
 			
 			for (int i = 0; i < n; i++)
 			{
@@ -575,25 +579,25 @@ void calculator(){
 			}
 			
 
-			printf("The result is %.2llf \n\n", median(arr,n));
+			printf("Hasil akhirnya adalah %.2llf!\n\n", median(arr,n));
 			
 		}
 		
 		//modus
 		else if (operasi == 12)
 		{
-			puts("mau berapa nomer");
+			puts("Kamu mau menginput berapa nomor ya?? = ");
 			int n; // testcase
 			scanf("%d", &n);
 			int arr[n];
-			puts("masukin nomer2nya");
+			puts("Masukkan value dari setiap nomor = \n");
 			
 			for (int i = 0; i < n; i++)
 			{
 				scanf("%d", &arr[i]);
 			}
 			
-			printf("The result is %d\n\n", modus(n, arr));
+			printf("Hasil akhirnya adalah %d!\n\n", modus(n, arr));
 			
 			
 		}
@@ -606,13 +610,11 @@ void calculator(){
 		char pilihan;
 		
 		do{
-			printf("Apakah anda ingin membuka kalkulator lagi?(Y/T) : ");
+			printf("Apakah anda ingin membuka kalkulator lagi? (Y/T) : ");
 			getchar();
 			scanf("%c", &pilihan);
-		}while((pilihan != 'T') && (pilihan != 'Y'));
-		
-		
-		if(pilihan == 'T'){
+		}while((pilihan != 'T') && (pilihan != 'Y') && (pilihan != 'y') && (pilihan != 't'));
+		if(pilihan == 'T' || pilihan == 't'){
 			subMenu(); // ganti function submenu
 		}else{
 			calculator(); //ganti function calculator
@@ -635,11 +637,17 @@ void blackJack() {
 	char set10[10] ="10 7";
 	int input;
 	int total = 0;
+	for(int i = 0; i < 30; i++)
+	{
+		printf("\n");
+	}
+	printf("\n");
 	puts(" ____  _     ____  ____  _  __    _  ____  ____  _  __");
 	puts("/  __\\/ \\   /  _ \\/   _\\/ |/ /   / |/  _ \\/   _\\/ |/ /");
 	puts("| | //| |   | / \\||  /  |   /    | || / \\||  /  |   /");
 	puts("| |_\\\\| |_/\\| |-|||  \\__|   \\ /\\_| || |-|||  \\__|   \\");
 	puts("\\____/\\____/\\_/ \\|\\____/\\_|\\_\\\\____/\\_/ \\|\\____/\\_|\\_\\");
+	printf("\n");
 	printf("Pilihlah sebuah angka dari 1-10! \n");
 	scanf("%d", &input );
 	if (input == 1) {
@@ -868,7 +876,7 @@ void blackJack() {
 	fclose(fpappend);
 	fclose(fpread);
 	char pilihan;
-	printf("Apakah anda ingin bermain lagi?(Y/T)");
+	printf("Apakah anda ingin bermain lagi?(Y/T) = ");
 	scanf("%c", &pilihan);
 	(pilihan == 'Y' || pilihan == 'y')? blackJack() : subMenu();
 }
