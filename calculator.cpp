@@ -13,29 +13,22 @@
 #include <stdio.h>
 
 //tambah
-int tambah(int x, int sum)
+int tambah(int x)
 {
-	for (int i = 1; i <= x; i++)
-	{
-		int y[i];
-		scanf("%d", &y[i]);
-		
-		if (i == 1)
-		{
-			sum = y[i];
-		}
-		else
-		{
-			sum += y[i];
-		}
+	int sum = 0;
+	while(x>0){
+		int tempnum;
+		scanf("%d", &tempnum);
+		sum+= tempnum;
+		x--;
 	}
 	
 	return sum;
 }
 
 //kurang
-int kurang(int x, int sum)
-{
+int kurang(int x, int sum){
+
 	for (int i = 1; i <= x; i++)
 	{
 		int y[i];
@@ -348,7 +341,7 @@ void calculator(){
 			int sum = 0;
 			printf("Masukin nomer2 nya\n");
 			
-			printf("the result is %d\n\n", tambah(x, sum));
+			printf("the result is %d\n\n", tambah(x));
 		}
 
 		//kurang
