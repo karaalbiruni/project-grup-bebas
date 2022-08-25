@@ -335,12 +335,11 @@ int main(){
     {
         printf("Nama kita sama nichhh!!\n");
     }
-    else
-    {
-        printf("Nama kita berbeda lohhh!\n");
-    }
-
-    printf("Halo %s! Nah gini kan baru enak kan?? BTWWWW kita namanya beda %d huruf lohhh!! \n", user.name, charUserName - charBotName);
+	int bedaKata = charUserName - charBotName;
+	if (bedaKata < 0) {
+		bedaKata*=-1;
+	}
+    printf("Halo %s! Nah gini kan baru enak kan?? BTWWWW kita namanya beda %d huruf lohhh!! \n", user.name, bedaKata);
     printf("Aku penasaran nih, jurusan kamu apaan y? ");
     scanf("%[^\n]", user.jurusan);
     getchar();
