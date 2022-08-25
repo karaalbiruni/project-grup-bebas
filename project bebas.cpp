@@ -654,7 +654,7 @@ void blackJack() {
 	puts("| |_\\\\| |_/\\| |-|||  \\__|   \\ /\\_| || |-|||  \\__|   \\");
 	puts("\\____/\\____/\\_/ \\|\\____/\\_|\\_\\\\____/\\_/ \\|\\____/\\_|\\_\\");
 	printf("\n");
-	printf("Halo user! saya %s! dan selamat datang di permaninan blackjack\n", bots[2].initial);
+	printf("Halo user! Saya %s! dan selamat datang di permainan Blackjack!\n", bots[2].initial);
 	printf("Pilihlah sebuah angka dari 1-10! \n");
 	scanf("%d", &input );
 	if (input == 1) {
