@@ -772,24 +772,73 @@ void blackJack() {
     	break;
 	}
   }
-    if (total > 21) {
+    bool win = 0;
+	if (total > 21) {
     	printf("Jumlah angka kartu anda melebihi 21, yang artinya anda BUST\n");
     	printf("Anda kalah dalam permainan.\n");
 	}
 	else if (total == 21) {
 		printf("Jumlah angka kartu anda 21.\nSelamat, anda telah memenangkan permainan.\n");
+		win = 1;
 	}
 	else if (total < 21) {
 		int dealer = total + 5;
 		if (dealer > 21) {
 			printf("Jumlah angka kartu dealer adalah %d, yang artinya ialah BUST.\n", dealer);
 			printf("Selamat, anda telah memenangkan permainan.\n");
+			win = 1;
 		}
 		else{
 			printf("Jumlah angka kartu dealer adalah %d, jumlah angka kartu dealer melebihi jumlah angka milikmu.\nAnda telah kalah dalam permainan.");
 		}
 		
 	}
+	int totalGame;
+	int totalWin = 0;
+	int totalLoss = 0;
+	FILE* fpappend = fopen("record.txt", "a");
+	FILE* fpread = fopen("record.txt", "r");
+	if (fscanf(fpread,"%d", &totalGame) == 0) {
+		totalGame = 1;
+		fprintf(fpappend,"%d\n", totalGame);
+		(win == 1)? fprintf(fpappend,"\n%c", 'W') :fprintf(fpappend,"\n%c", 'L');
+		printf("Total permainan Blackjack yang sudah dimainkan : %d\n", totalGame);
+		(win == 1)? printf("Total kemenangan : %d\nTotal kekalahan : %d", 1,0): printf("Total kemenangan : %d\nTotal kekalahan : %d", 0,1);
+	}
+	else {
+		fscanf(fpread,"%d", &totalGame);
+		for (int i = 0;i<totalGame;i++) {
+			char result;
+			fscanf(fpread,"%c", &result);
+			if (result == 'W') {
+				totalWin++;
+			}
+			else {
+				totalLoss++;
+			}
+		}
+		if (win == 1){
+			totalWin++;
+		}
+		else{
+			totalLoss++;
+		}
+		totalGame++;
+		printf("Total permainan Blackjack yang sudah dimainkan : %d\n", totalGame);
+		printf("Total kemenangan : %d\n", totalWin);
+		printf("Total kekalahan : %d\n", totalLoss);
+		FILE* fpwrite = fopen("record.txt", "w");
+		fprintf(fpwrite,"%d\n", totalGame);
+		for(int i = 0;i<totalWin;i++) {
+			fprintf(fpappend,"%c", 'W');
+		}
+		for(int i = 0;i<totalLoss;i++) {
+			fprintf(fpappend,"%c", 'L');
+		}
+		fclose(fpwrite);
+	}
+	fclose(fpappend);
+	fclose(fpread);
 	char pilihan;
 	printf("Apakah anda ingin bermain lagi?(Y/T)");
 	scanf("%c", &pilihan);
