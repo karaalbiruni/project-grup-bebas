@@ -313,7 +313,8 @@ void mergeSort(int arr[], int start, int end){
 
 int main(){
 	struct Bot bot;
-	strcpy(bot.initial, "Maira");
+    strcpy(bot.initial, "Maira");
+    int charBotName = strlen(bot.initial);
 		
 	
 	//input data diri 
@@ -326,21 +327,34 @@ int main(){
 	puts("  \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___| (_) ");
 	puts("==================================================");
 	printf("Halo user! Perkenalkan, nama saya %s!\n", bot.initial);
-	printf("Enggak enak nih, manggil kamu user... Nama kamu siapa yaaa? ");
-	scanf("%[^\n]", user.name);
-	getchar();
-	
-	
-	printf("Halo %s! Nah gini kan baru enak kan?? Kamu mengambil jurusan apa ya?? ", user.name);
-	scanf("%[^\n]", user.jurusan);
-	getchar();
-	
-	
-	printf("Oh ternyata kamu ngambil jurusan %s yaaa.. Sebentar... Kamu ini cowok atau cewek ya? Aku penasaran... ", user.jurusan);
-	scanf("%s", user.gender);
-	getchar();
-	subMenu();
-	return 0;
+    printf("Enggak enak nih, manggil kamu user... Nama kamu siapa yaaa? ");
+    scanf("%[^\n]", user.name);
+    getchar();
+    int charUserName = strlen(user.name);
+    if(strcmp(user.name, bot.initial)==0)
+    {
+        printf("Nama kita sama nichhh!!\n");
+    }
+    else
+    {
+        printf("Nama kita berbeda lohhh!\n");
+    }
+
+    printf("Halo %s! Nah gini kan baru enak kan?? BTWWWW kita namanya beda %d huruf lohhh!! \n", user.name, charUserName - charBotName);
+    printf("Aku penasaran nih, jurusan kamu apaan y? ");
+    scanf("%[^\n]", user.jurusan);
+    getchar();
+
+
+    printf("Oh ternyata kamu ngambil jurusan %s yaaa.. Sebentar...\n", user.jurusan);
+    printf("Kamu ini cowok atau cewek ya? Aku penasaran... ");
+    scanf("%s", user.gender);
+    getchar();
+    subMenu();
+    //KALO MO NAMBAH FITUR LAIN DISINI NAMBAH OPTIONNY!!
+    return 0;
+ 
+
 }      
 
 void subMenu() {
@@ -355,6 +369,7 @@ void subMenu() {
 	puts("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	puts("1. KALKULATOR SUPER CANGGIH");
 	puts("2. MINIGAME (BLACKJACK/21)");
+	puts("3. EXIT");
 
 	int choice;
 	//perulangan jalan terus kalau choicenya diluar 1-2
@@ -371,6 +386,9 @@ void subMenu() {
 	}else if (choice == 2){
 		//lanjut blackjack
 		blackJack(); // ganti null jadi function blackjack
+	}
+	else if (choice == 3){
+		return;
 	}
 }
 
