@@ -349,6 +349,8 @@ int main(){
     printf("Kamu ini cowok atau cewek ya? Aku penasaran... ");
     scanf("%s", user.gender);
     getchar();
+    
+    printf("Oke %s, %s sudah mencatat bahwa kamu adalah seorang %s yang bernama %s dan kamu mengambil jurusan %s!\n", user.name, bot.initial, user.gender, user.name, user.jurusan);
     subMenu();
     //KALO MO NAMBAH FITUR LAIN DISINI NAMBAH OPTIONNY!!
     return 0;
@@ -357,7 +359,6 @@ int main(){
 }      
 
 void subMenu() {
-	printf("Oke %s, %s sudah mencatat bahwa kamu adalah seorang %s yang bernama %s dan kamu mengambil jurusan %s!\n", user.name, bot.initial, user.gender, user.name, user.jurusan);
 	puts("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");	
 	puts("  ______  __    __    ______     ______        _______. _______      ______   .__   __.  _______     __    ");
  	puts(" /      ||  |  |  |  /  __  \\   /  __  \\      /       ||   ____|    /  __  \\  |  \\ |  | |   ____|   |  |     ");
