@@ -617,6 +617,11 @@ void blackJack() {
 	char set10[10] ="10 7";
 	int input;
 	int total = 0;
+	puts(" ____  _     ____  ____  _  __    _  ____  ____  _  __");
+	puts("/  __\\/ \\   /  _ \\/   _\\/ |/ /   / |/  _ \\/   _\\/ |/ /");
+	puts("| | //| |   | / \\||  /  |   /    | || / \\||  /  |   /");
+	puts("| |_\\\\| |_/\\| |-|||  \\__|   \\ /\\_| || |-|||  \\__|   \\");
+	puts("\\____/\\____/\\_/ \\|\\____/\\_|\\_\\\\____/\\_/ \\|\\____/\\_|\\_\\");
 	printf("Pilihlah sebuah angka dari 1-10! \n");
 	scanf("%d", &input );
 	if (input == 1) {
@@ -704,7 +709,7 @@ void blackJack() {
     } 
     while (choice[0] != 'S' && choice[0] !='H');
 		
-	if (choice[0] == 'H') {
+	if (choice[0] == 'H' || choice[0] == 'h') {
 	    int input1;
 	    printf("Pilihlah sebuah angka dari 1-10! \n");
 	    scanf("%d", &input1);
@@ -768,7 +773,7 @@ void blackJack() {
 	        printf("Jumlah angka kartu anda %d... \n", total);
 	    }
     }
-    else if(choice[0] == 'S') {
+    else if(choice[0] == 'S' || choice[0] == 's') {
     	break;
 	}
   }
@@ -793,6 +798,11 @@ void blackJack() {
 		}
 		
 	}
+	puts(" ,---.   ,--.            ,--.");
+	puts("'   .-',-'  '-. ,--,--.,-'  '-. ,---.");
+	puts("`.  `-.'-.  .-'' ,-.  |'-.  .-'(  .-'");
+	puts(".-'    | |  |  \\ '-'  |  |  |  .-'  `)");
+	puts("`-----'  `--'   `--`--'  `--'  `----' ");
 	int totalGame;
 	int totalWin = 0;
 	int totalLoss = 0;
@@ -842,5 +852,5 @@ void blackJack() {
 	char pilihan;
 	printf("Apakah anda ingin bermain lagi?(Y/T)");
 	scanf("%c", &pilihan);
-	(pilihan == 'Y')? blackJack() : subMenu();
+	(pilihan == 'Y' || pilihan == 'y')? blackJack() : subMenu();
 }
