@@ -352,7 +352,7 @@ int main(){
 
     printf("Oh ternyata kamu ngambil jurusan %s yaaa.. Sebentar...\n", user.jurusan);
     printf("Kamu ini cowok atau cewek ya? Aku penasaran... ");
-    scanf("%s", user.gender);
+    scanf("%[^\n]", user.gender);
     getchar();
     subMenu();
     //KALO MO NAMBAH FITUR LAIN DISINI NAMBAH OPTIONNY!!
@@ -404,6 +404,7 @@ void calculator(){
 
 	//perulangan while dijalankan jika kondisi kalkulator true 
 	while(true){
+		
 
 		//menu kalkulator , berhenti jika angka yang diimput adalah 1 - 13
 		do{
@@ -609,9 +610,8 @@ void calculator(){
 		}
 		
 		else{
-			subMenu();
+			return subMenu();
 		}
-		
 		
 		char pilihan;
 		
@@ -619,15 +619,18 @@ void calculator(){
 			printf("Apakah anda ingin membuka kalkulator lagi? (Y/T) : ");
 			getchar();
 			scanf("%c", &pilihan);
+			getchar();
 		}while((pilihan != 'T') && (pilihan != 'Y') && (pilihan != 'y') && (pilihan != 't'));
+		
 		if(pilihan == 'T' || pilihan == 't'){
-			subMenu(); // ganti function submenu
+			return subMenu(); 
 		}else{
-			calculator(); //ganti function calculator
+			return calculator(); 
 		}
-	
-	}
 
+		
+	}
+	
 }
 
 void blackJack() {
