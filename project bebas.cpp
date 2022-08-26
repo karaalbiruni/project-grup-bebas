@@ -355,7 +355,6 @@ int main(){
     scanf("%[^\n]", user.gender);
     getchar();
     subMenu();
-    //KALO MO NAMBAH FITUR LAIN DISINI NAMBAH OPTIONNY!!
     return 0;
  
 
@@ -389,10 +388,10 @@ void subMenu() {
 
 	if(choice == 1){
 		//lanjut kalkulator
-		calculator(); // ganti null jadi function calculator
+		calculator(); 
 	}else if (choice == 2){
 		//lanjut blackjack
-		blackJack(); // ganti null jadi function blackjack
+		blackJack(); 
 	}
 	else if (choice == 3){
 		return;
